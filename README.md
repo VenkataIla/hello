@@ -6,26 +6,26 @@ ex: c/Users/user/k8/hello
 check docker -v, is docker available
 if available run this command
 ### To create docker image
-#docker build -f Dockerfile -t hello .
+#### docker build -f Dockerfile -t hello .
 
 ### Check docker image
-docker images
+#### docker images
 you can find
 
 ### Run Docker from local
-#docker run -p 8080:8080 hello-ui
+#### docker run -p 8080:8080 hello-ui
 
 ### Test the application in local
 http://localhost:8080/hello
 the result will be : Hello Stakater
 
 ### providing access to kubernetes from local - run from normal command editor if windows operating system else eval $(minikube docker-evn)
-# @FOR /f "token=*" %i IN ('minikube -p minikube docker-env') DO @%i
+#### @FOR /f "token=*" %i IN ('minikube -p minikube docker-env') DO @%i
 
 ### to check docker avaialble to access in kuberenetes 
-# docker images
+#### docker images
 ### deploy in to kubernetes
-# kubectl apply -f deployment.yaml
+#### kubectl apply -f deployment.yaml
 
 result will be
 
@@ -33,7 +33,7 @@ deployment.apps/hello-deployment created
 service/hello-service created
 
 ### service check
-# minikube service hello-service
+#### minikube service hello-service
 will open a default browser with ip and port 
 
 ### Verify in kubernetes dashboard deplyments, servcies and pods
